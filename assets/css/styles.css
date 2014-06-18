@@ -1,0 +1,222 @@
+body{
+
+
+}
+
+.main, .home-content {
+	background: #EEDDC7;
+}
+
+.content label {
+	color: #885C00;
+	font-weight: normal;
+}
+
+.content h2 {
+	font-size: 24px;
+}
+
+/*-------- HOME CONTENT STYLE -------*/
+.career {
+	background: #E5A75A;
+	background: -moz-linear-gradient(top,  #E5A75A 9%, #E5A75A 9%, #E5A75A 16%, #E5A75A 19%, #E5A75A 23%, #fccd4d 39%, #fbdf93 49%, #fbdf93 49%, #fceabb 57%, #fceabb 64%, #fceabb 64%, #fceabb 64%, #fceabb 64%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(9%,#E5A75A), color-stop(9%,#E5A75A), color-stop(16%,#E5A75A), color-stop(19%,#E5A75A), color-stop(23%,#E5A75A), color-stop(39%,#fccd4d), color-stop(49%,#fbdf93), color-stop(49%,#fbdf93), color-stop(57%,#fceabb), color-stop(64%,#fceabb), color-stop(64%,#fceabb), color-stop(64%,#fceabb), color-stop(64%,#fceabb)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #E5A75A 9%,#E5A75A 9%,#E5A75A 16%,#E5A75A 19%,#E5A75A 23%,#fccd4d 39%,#fbdf93 49%,#fbdf93 49%,#fceabb 57%,#fceabb 64%,#fceabb 64%,#fceabb 64%,#fceabb 64%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #E5A75A 9%,#E5A75A 9%,#E5A75A 16%,#E5A75A 19%,#E5A75A 23%,#fccd4d 39%,#fbdf93 49%,#fbdf93 49%,#fceabb 57%,#fceabb 64%,#fceabb 64%,#fceabb 64%,#fceabb 64%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #E5A75A 9%,#E5A75A 9%,#E5A75A 16%,#E5A75A 19%,#E5A75A 23%,#fccd4d 39%,#fbdf93 49%,#fbdf93 49%,#fceabb 57%,#fceabb 64%,#fceabb 64%,#fceabb 64%,#fceabb 64%); /* IE10+ */
+background: linear-gradient(to bottom,  #E5A75A 9%,#E5A75A 9%,#E5A75A 16%,#E5A75A 19%,#E5A75A 23%,#fccd4d 39%,#fbdf93 49%,#fbdf93 49%,#fceabb 57%,#fceabb 64%,#fceabb 64%,#fceabb 64%,#fceabb 64%); /* W3C */
+
+}
+
+.page-wrapper {
+	background: #fff;
+	margin: 20px 2px;
+	padding: 18px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.content-wrapper {
+	min-height:100%;
+    width:100%;
+    position:relative;   
+    display:inline-block;
+}
+
+
+.content {
+	min-height:500px;     
+    position:relative;
+    background-color:#E9E9E9;
+    float:right;
+    padding: 14px 11px;
+}
+
+.content h4 {
+	font-weight: bold;
+	line-height: 40px;
+}
+
+.content h3 {
+	color: #990000;
+}
+
+
+.career-content {
+	line-height: 20px;
+}
+
+.clear {
+	clear: both;
+}
+
+.nav-sidebar h2 {
+	font-size: 14px;
+	font-weight: 700;
+	background: #7E0707;
+	margin-top: 0px;
+	line-height: 40px;
+	color: #fff;
+	padding:3px;
+
+}
+
+.nav .nav-sidebar li a {
+	padding: 3px;
+	text-transform: uppercase;
+}
+
+
+hr {
+	border: 2px solid #000;
+}
+
+.pull-right {
+	margin-right: 50px;
+}
+
+.page-header {
+	border-bottom: 2px solid #CACACA;
+	font-weight: 700;
+	font-size: 25px;
+}
+.sidebar {
+	background: none repeat scroll 0 0 #C60C30;
+	padding:0px;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    position:absolute;
+   
+
+}
+
+.sidebar li {
+	border-bottom: 1px solid #eee;
+}
+.sidebar a {
+	color: #fff;
+}
+
+.sidebar li a:hover {
+	background: transparent;
+
+}
+
+/*---------------GENERAL -----------------*/
+
+.no-background {
+	background: transparent;
+}
+
+label.error {
+	color: #fff;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 1.4;
+	margin-top: 0.5em;
+	width: 100%;
+	float: none;
+	background: #F04949; 
+	padding:5px;
+	border-radius: 4px;
+}
+
+.form-group .required .control-label:after {
+  content:"*";color:red;
+}
+
+
+.alert {
+	color: #F04949;
+	padding: 13px;
+	font-weight: bold;
+}
+
+.jobs-buttons li{	
+	padding: 5px;
+}
+
+/****------------END -----------------*/
+
+.logout {
+	line-height: 4;
+}
+
+.info-tabs {
+	margin-bottom: 25px;
+}
+
+.info-tabs li {
+	width: 16%;
+	background: #838383;
+	border-right: 1px solid #C0C0C0;
+	border-left: 1px solid #585757;
+}
+
+.info-tabs li a {
+	color: #fff;
+}
+
+/*---------------  MY ACCOUNT */
+.info-tabs li a:hover{
+	background: #C92222;
+}
+.info-tabs >li.active>a, .info-tabs>li.active>a:hover {
+	background: #FDF0AC;
+}
+
+/*---------- PERSONAL INFORMATIONS ----------------------*/
+
+.unames input[type="text"]{
+	width: 20%;
+}
+
+
+.form-inline .form-group {
+	padding-top: 10px;
+}
+
+.age input[type="text"] {
+	width: 20%;
+}
+
+
+/*---------- FORM ADDITIONAL STYLES ----------------------*/
+
+.row legend {
+	border-bottom: 5px solid #000;
+}
+.container-fluid .input-medium {
+	width: 280px;
+}
+
+.container-fluid .label-bold {
+	font-weight: bold;
+	margin-bottom: 7px;
+
+}
+
+
+
