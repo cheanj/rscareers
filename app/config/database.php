@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'careers',
+			'database'  => 'car33rs',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',

@@ -29,8 +29,8 @@ class UserController extends BaseController {
       'firstname'       => 'required',
       'middlename'      => 'required',
       'lastname'        => 'required',
-      'username'        => 'required',
-      'email'           => 'required|email',
+      'username'        => 'required|unique:users',
+      'email'           => 'required|email|unique',
       'password'        => 'required'
     );
 
@@ -49,30 +49,15 @@ class UserController extends BaseController {
       $user->email  = Input::get('email');  
       $user->password = Hash::make(Input::get('password')); 
       $user->save();
-      $id = $user->id;  
-      $fullname = array('firstname' => $input['firstname'], 'middlename' => $input['middlename'], 'lastname' => $input['lastname']);
-      $fullname = json_encode($fullname);
-      $meta_key = array('fullname', 'user_level','show_admin_tools',
-          'personal_info', 
-          'educational_background',
-          'employment_history', 
-          'work_interest',
-          'trainings_seminar',
-          'skills_qualification'
-          );
-      $meta_value = array($fullname, 1, 'false', '', '', '','','','');
+      $id = $user->id;         
 
-      
-      $usermeta = Usermeta::create(array('meta_key' => 'fullname', 'meta_value' => $fullname));
-      $usermeta1 = Usermeta::create(array('meta_key' => 'user_level', 'meta_value' => '1'));
-      $user->usermeta()->save($usermeta);
-      $user->usermeta()->save($usermeta1);
-      
-      $logged_user = $user->username;
+      $logged_user = $user->$id;
       $msg = 'Welcome' .' ' .$user->firstname;
-      Session::put('user_log', $logged_user);
-      //Session::flash('message', 'Successfull created user');
-      return  $this->layout->content = Redirect::to('jobs')->with('message', $msg);;
+      if($user->save()) {
+        Session::put('user_log', $logged_user);
+        //Session::flash('message', 'Successfull created user');
+        return  $this->layout->content = Redirect::to('jobs')->with('message', $msg);
+      }
     }
   }
 

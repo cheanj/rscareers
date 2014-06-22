@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateJobFieldsTable extends Migration {
+class CreateTableJobfields extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,11 +12,11 @@ class CreateJobFieldsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('job_fields', function(Blueprint $table)
+		Schema::create('jobfields', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('job_fields', 255);
-			$table->integer('added_by');
+			$table->string('job_fieldname', 45);
+			$table->tinyInteger('isdelete');
 			$table->timestamps();
 		});
 	}
@@ -28,10 +28,7 @@ class CreateJobFieldsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('job_fields', function(Blueprint $table)
-		{
-			Schema::dropIfExists('job_fields');
-		});
+		Schema::drop('jobfields');
 	}
 
 }

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateApplicantInformation extends Migration {
+class CreateComputerSkillsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +12,12 @@ class CreateApplicantInformation extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('applicant_information', function(Blueprint $table)
+		Schema::create('computer_skills', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->string('skill_name', 40);
+			$table->unsignedInteger('created_by');
+			$table->tinyInteger('isdelete');
 			$table->timestamps();
 		});
 	}
@@ -26,7 +29,7 @@ class CreateApplicantInformation extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('applicant_information');
+		Schema::drop('computer_skills');
 	}
 
 }

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCitizenship extends Migration {
+class CreateDegreeListTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +12,11 @@ class CreateCitizenship extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('citizenship', function(Blueprint $table)
+		Schema::create('degree_list', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->string('degree_description', 45);
+			$table->unsignedInteger('created_by');
 			$table->timestamps();
 		});
 	}
@@ -26,7 +28,7 @@ class CreateCitizenship extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('citizenship');
+		Schema::drop('degree_list');
 	}
 
 }

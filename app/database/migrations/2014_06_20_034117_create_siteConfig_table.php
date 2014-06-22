@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateReligion extends Migration {
+class CreateSiteConfigTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,10 +12,10 @@ class CreateReligion extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('religion', function(Blueprint $table)
+		Schema::create('siteConfig', function(Blueprint $table)
 		{
-			$table->increments('id');
-			$table->timestamps();
+			$table->string('settingName', 60);
+			$table->string('value', 8000);			
 		});
 	}
 
@@ -26,7 +26,7 @@ class CreateReligion extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('religion');
+		Schema::drop('siteConfig');
 	}
 
 }
